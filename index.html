@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,13 +15,51 @@
   </style>
 </head>
 <body>
+  <main>
+    <section class="left">
+      <p>
+        Your Result
+      </p>
+      <div class="result">
+        <h1>76</h1>
+        <p>of 100</p>
+      </div>
+      <h3>Great</h3>
+      <p>
+        You scored higher than 65% of the people who have taken these tests.
+      </p>
+    </section>
+    <secttion class="right">
+      <p>Summary</p>
+      <div class="reaction">
+          <p>Reaction</p>
+          <p><span id="reaction-span">80</span>/100</p>
+        </div>
+        <div class="memory">
+        <p>Memory</p>
+        <p><span id="memory-span">92</span>/100</p>
+        
+      </div>
+      <div class="verbal">
+        <p>Verbal</p>
+        <p><span id="verbal-span">92</span>/100</p>
+        
+      </div>
+      <div class="visual">
+        <p>Visual</p>
+        <p><span id="visual-span">92</span>/100</p>
 
+      </div>
+      <button class="continue-btn">
+        Continue
+      </button>
+    </secttion>
+  </main>
   Your Result
   76
   of 100
 
   Great
-  You scored higher than 65% of the people who have taken these tests.
   
   Summary
 
