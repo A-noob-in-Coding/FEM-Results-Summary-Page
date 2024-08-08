@@ -1,0 +1,172 @@
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+    font-family: HankedGrotesk;
+    src: url("/assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "HankedGrotesk";
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pale-blue);
+}
+
+main{
+    background-color: var(--white);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 50;
+}
+
+.left{
+    padding: 2rem;
+    color: var(--white);
+    width: 50%;
+    background: linear-gradient(to bottom, var(--light-slate-blue),var(--violet-blue));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    p{
+        text-align: center;
+    }
+    .result{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        width: 50%;
+        border-radius: 50%;
+        background: linear-gradient(to bottom, var(--violet-blue), var(--light-royal-blue));
+        h1{
+            font-size: 3rem;
+        }
+    }
+    .great{
+        font-size: 2rem;
+    }
+    .stats-ppl{
+        font-size: 0.9rem;
+        font-weight: light;
+        text-align: center;
+    }
+}
+
+.right{
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    .summary{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    div{
+        border-radius: 5px;
+        padding: 0.5rem;
+        width: 100%;
+        background-color: beige;
+        display: flex;
+        justify-content: space-between;
+        span{
+            font-weight: bold;
+        }
+        p{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    button{
+        width: 100%;
+        border: none;
+        padding: 1rem;
+        border-radius: 100px;
+        outline: 0;
+        color: var(--white);
+        cursor: pointer;
+        background-color: var(--dark-gray-blue);
+    }
+    button:hover{
+        
+        background: linear-gradient(to bottom, var(--violet-blue), var(--light-royal-blue));
+    }
+    .reaction{
+        background-color: hsla(0, 100%, 67%, 0.1);
+        .reaction-title::before{
+            content: url("/assets/images/icon-reaction.svg");
+            vertical-align: middle;
+            padding: 0.3rem 0.25rem 0rem 0.5rem;    
+        }
+    }
+    .memory{
+        .memory-title::before{
+            width: 100%;
+            content: url("/assets/images/icon-memory.svg");
+            vertical-align: middle;
+            padding: 0.3rem 0.25rem 0rem 0.5rem;
+        }
+        background-color: hsla(39, 100%, 56%,0.1);
+    }
+    .verbal{
+        .verbal-title::before{
+            content: url("/assets/images/icon-verbal.svg");
+            vertical-align: middle;
+            padding: 0.3rem 0.25rem 0rem 0.5rem;
+            
+        }
+        background-color: hsla(166, 100%, 37%,0.1);
+    }
+    .visual{
+        .visual-title::before{
+            content: url("/assets/images/icon-visual.svg");
+            vertical-align: middle;
+            padding: 0.3rem 0.25rem 0rem 0.5rem;
+            }
+        background-color: hsla(234, 85%, 45%,0.1);
+    }
+}
+
+@media screen and (max-width:48em) {
+    main{
+        width: 100vw;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    .left{
+        border-radius: 0px 0px 20px 20px;
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+}
+
